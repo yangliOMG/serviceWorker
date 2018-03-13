@@ -1,0 +1,34 @@
+﻿<html><head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+	<title>缓存JS和图片</title>
+	<style type="text/css">
+	span:empty::before {
+		content: '缺省';
+		color: gray;
+	}
+	</style>
+</head>
+<body style="zoom: 1;">
+<img src="900kb.jpg" alt="示意图片" width="256" height="192">
+<img src="mm1.jpg" alt="示意图片" width="256" height="192">
+<p><img src="green.jpg" alt="示意图片" width="256" height="192"></p>
+
+<img src="green.jpg" alt="示意图片" width="256" height="192">
+<h3>一些提示信息</h3>
+<ul>
+	<li>浏览器是否支持：<span id="isSupport">支持</span></li>
+	<li>service worker是否注册成功：<span id="isSuccess">注册成功</span></li>
+	<li>当前注册状态：<span id="state">active</span></li>
+	<li>当前service worker状态：<span id="swState">activated</span></li>
+</ul>
+
+<script type="text/javascript" src="lib/jquery/jquery-1.9.0.min.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw-demo-cache.js');
+}
+</script>
+
+</body></html>
