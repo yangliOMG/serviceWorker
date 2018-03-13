@@ -1,4 +1,4 @@
-var VERSION = 'v6';
+var VERSION = 'v1';
 
 // 缓存
 self.addEventListener('install', function(event) {
@@ -7,9 +7,7 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         'start.html',
         'lib/jquery/jquery-1.9.0.min.js',
-        'mm1.jpg',
-        'green.jpg',
-        '900kb.jpg'
+        'mm1.jpg'
         ]);
     })
   );
