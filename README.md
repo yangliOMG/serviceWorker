@@ -4,7 +4,16 @@
 
 预览：https://yangliomg.github.io/serviceWorker/start.html
 
+说明：
 
+1.三级缓存原理：  1.先去内存看，如果有，直接加载
+                2.如果内存没有，择取硬盘获取，如果有直接加载
+                3.如果硬盘也没有，那么就进行网络请求
+                4.加载到的资源缓存到硬盘和内存
+                
+2.serviceWorker提供了新的缓存位置（缓存在serviceWorker中）
+
+3.前端浏览器缓存及代码部署：http://www.haorooms.com/post/qianduan_cache_bushu
 
 效果：
 
